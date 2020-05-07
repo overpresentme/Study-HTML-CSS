@@ -7,6 +7,10 @@
              vh, vw, vmin, vmax
              ex, ch: font 세부사항 관련
             */
+            html{
+                font-size: 10vw;
+                line-height: 10vh;
+            }
             .header{
                 background-color: blue;
                 height: 20vh;
@@ -34,6 +38,10 @@
                 background-color: blueviolet;
                 height: 20vh;
             }
+
+            #hi{
+                font-size: 0.6rem;
+            }
         </style>
     </head>
     <body>
@@ -42,7 +50,9 @@
         </div>
         <div class="main">
             <div class="left"></div>
-            <div class="center"></div>
+            <div class="center">
+                <p id="hi">Hi, My name is Hankyeol Lee</p>
+            </div>
             <div class="right"></div>
         </div>
         <div class="footer">
