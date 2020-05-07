@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            /*
+             em: 상위 요소의 몇배
+             rem: html 요소의 몇배
+             vh, vw, vmin, vmax
+             ex, ch: font 세부사항 관련
+            */
+            .header{
+                background-color: blue;
+                height: 20vh;
+            }
+            .main{
+                height: 60vh;
+                display: flex;
+            }
+            .main *{
+                height: 100%;
+            }
+            .main .left{
+                background-color: red;
+                width: 30%;
+            }
+            .main .center{
+                background-color: darkgreen;
+                width: 40%;
+            }
+            .main .right{
+                background-color: rgb(212, 230, 115);
+                width: 30%;
+            }
+            .footer{
+                background-color: blueviolet;
+                height: 20vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+
+        </div>
+        <div class="main">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </body>
+</html>
