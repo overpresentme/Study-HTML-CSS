@@ -57,3 +57,7 @@
     background-color: #fff;
     color: #444;
 }
+
+#js-modal-close:hover{
+    cursor: pointer;
+}
