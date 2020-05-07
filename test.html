@@ -26,6 +26,7 @@
                 background-color: #ffadb0;
                 width: 30%;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
@@ -53,7 +54,8 @@
         </div>
         <div class="main">
             <div class="left">
-                <a href="#open-modal" class="btn-modal">Modal</a>
+                <a href="#open-modal" class="btn-modal">Modal-css</a>
+                <p id="modal-js" class="btn-modal">Modal-js</p>
             </div>
             <div class="center">
                 <p id="hi">Hi, My name is Hankyeol Lee</p>
@@ -72,13 +74,26 @@
                 <div>The quick brown fox jumped over the lazy dog.</div>
             </div>
         </div>
+
+        <div id="open-modal2" class="modal-window2">
+            <div id="modal-content2">
+                <a href="" title="Close" class="modal-close">close &times;</a>
+                <h1>CSS Modal</h1>
+                <div>The quick brown fox jumped over the lazy dog.</div>
+            </div>
+        </div>
         <!-- /Modal -->
     </body>
     <script>
-        const modal_hide = (e) => {
-            window.location.href = "#modal-close";
-        }
-        document.querySelector('#open-modal').addEventListener('click', modal_hide);
+        document.querySelector('#open-modal').addEventListener('click', e => {window.location.href = "#modal-close";});
         document.querySelector('#modal-content').addEventListener('click', e => {e.stopPropagation();});
+        
+        document.querySelector('#modal-js').addEventListener('click', e => {
+            document.querySelector('#open-modal2').style.display = 'block';
+        });
+        document.querySelector('#open-modal2').addEventListener('click', e => {
+            document.querySelector('#open-modal2').style.display = 'none';
+        });
+        document.querySelector('#modal-content2').addEventListener('click', e => {e.stopPropagation();});
     </script>
 </html>

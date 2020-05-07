@@ -8,6 +8,10 @@
     padding: 10px;
 }
 
+.btn-modal:hover{
+    cursor: pointer;
+}
+
 .modal-window{
     background-color: rgba(200, 200, 200, 0.75);
     position: fixed;
@@ -25,6 +29,28 @@
 }
 
 .modal-window > div{
+    width: 30vw;
+    margin: 15% auto;
+    position: relative;
+    background-color: #fff;
+    color: #444;
+}
+
+.modal-window2{
+    background-color: rgba(200, 200, 200, 0.75);
+    position: fixed;
+    top:0; right:0; left:0; bottom:0;
+    display: none;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-window2 > div{
     width: 30vw;
     margin: 15% auto;
     position: relative;
