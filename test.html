@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="stylesheet" href="./modal.css">
         <style>
             /*
              em: 상위 요소의 몇배
@@ -8,26 +9,28 @@
              ex, ch: font 세부사항 관련
             */
             html{
-                font-size: 10vw;
-                line-height: 10vh;
+                font-size: 1vw;
             }
             .header{
-                background-color: blue;
+                background-color: #9ccdff;
                 height: 20vh;
             }
             .main{
                 height: 60vh;
                 display: flex;
             }
-            .main *{
+            .main > *{
                 height: 100%;
             }
             .main .left{
-                background-color: red;
+                background-color: #ffadb0;
                 width: 30%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .main .center{
-                background-color: darkgreen;
+                background-color: #dcffd4;
                 width: 40%;
             }
             .main .right{
@@ -35,12 +38,12 @@
                 width: 30%;
             }
             .footer{
-                background-color: blueviolet;
+                background-color: #f5e3ff;
                 height: 20vh;
             }
 
             #hi{
-                font-size: 0.6rem;
+                font-size: 3rem;
             }
         </style>
     </head>
@@ -49,7 +52,9 @@
 
         </div>
         <div class="main">
-            <div class="left"></div>
+            <div class="left">
+                <a href="#open-modal" class="btn-modal">Modal</a>
+            </div>
             <div class="center">
                 <p id="hi">Hi, My name is Hankyeol Lee</p>
             </div>
@@ -58,5 +63,22 @@
         <div class="footer">
 
         </div>
+
+        <!-- Modal -->
+        <div id="open-modal" class="modal-window">
+            <div id="modal-content">
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                <h1>CSS Modal</h1>
+                <div>The quick brown fox jumped over the lazy dog.</div>
+            </div>
+        </div>
+        <!-- /Modal -->
     </body>
+    <script>
+        const modal_hide = (e) => {
+            window.location.href = "#modal-close";
+        }
+        document.querySelector('#open-modal').addEventListener('click', modal_hide);
+        document.querySelector('#modal-content').addEventListener('click', e => {e.stopPropagation();});
+    </script>
 </html>
